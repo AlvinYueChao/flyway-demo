@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
+    username: alvin
+    password: ${db_password}
+
+  flyway:
+    baseline-version: 2024.05.17.1
+    locations: classpath:db/migration
+    encoding: UTF-8
+    validate-on-migrate: true
+    baseline-on-migrate: true
+    enabled: true
